@@ -21,13 +21,15 @@
             <input type="text" name="todo" class="form-control" placeholder="Enter Todo" style="border-radius: 20px;">
             <input type="submit" value="Add Todo" class="btn btn-md btn-primary mx-2" style="background-color: #3bb19b; border-color: white;">
         </form>
-
         <ul class="list-group my-5">
             <% todo.forEach(todos => { %>
-            <li class="list-group-item" style="border-radius: 20px; margin-bottom: 10px;"><%= todos.todo %> <a href="/delete/todo/<%= todos._id %>"
-                    class="btn btn-dark">Delete</a></li>
+                <li class="list-group-item" style="border-radius: 20px; margin-bottom: 10px;">
+                    <%= todos.todo %> 
+                    <a href="/delete/todo/<%= todos._id %>" class="btn btn-dark">Delete</a>
+                </li>
             <% }) %>
         </ul>
+        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
