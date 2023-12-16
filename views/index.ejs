@@ -19,14 +19,23 @@
     </form>
 
 
-    <ul class="list-group my-5">
+    <!-- <ul class="list-group my-5">
         <% todo.forEach(todos => { %>
         <li class="list-group-item" style="border-radius: 20px; margin-bottom: 10px;"><%= todos.todo %> <a href="/delete/todo/<%= todos._id %>"
                 class="btn btn-dark">Delete</a></li>
 
         <% }) %>
 
-    </ul>
+    </ul> -->
+    
+<ul class="list-group my-5">
+    <% todo.forEach(todos => { %>
+      <li class="list-group-item" style="border-radius: 20px; margin-bottom: 10px;">
+        <%= todos.todo %> 
+        <a href="/delete/todo/<%= todos._id %>" class="btn btn-dark">Delete</a>
+      </li>
+    <% }) %>
+  </ul>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
